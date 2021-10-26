@@ -7,7 +7,7 @@ function Offline() {
         <h1 className="text-center">
           Ups... parece ser que no tienes internet.
         </h1>
-        <img src={SadPikachu} className="img-fluid" />
+        <img src={SadPikachu} className="img-fluid" alt="sad pikachu" />
       </div>
     </>
   );
