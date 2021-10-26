@@ -5,17 +5,9 @@ function App() {
   const [pokemon, setPokemon] = useState([]);
   const [selectedPokemon, setSelectedPokemon] = useState(null);
 
-  console.log(selectedPokemon);
   const selectRef = useRef(null);
 
-  console.log("Renderizando componente");
-  console.log("Estado", pokemon);
-
-  // Se ejecuta DESPUÉS del renderizado
-  // componentDidMount
   useEffect(function () {
-    console.log("useEffect");
-
     fetch("https://bedu-pokemon-api.herokuapp.com/pokemon")
       .then((response) => response.json())
       .then(({ data }) => setPokemon(data));
@@ -31,7 +23,7 @@ function App() {
   }
 
   return (
-    <div className="container mt-4 d-flex justify-content-center">
+    <div className="container mt-4 d-flex justify-content-center flex-column align-items-center">
       <div className="col-8">
         <form onSubmit={onSubmit}>
           <div className="mb-3">
@@ -53,7 +45,7 @@ function App() {
         </form>
       </div>
 
-      <div className="row">
+      <div className="row mt-5">
         {selectedPokemon !== null ? <PokemonCard {...selectedPokemon} /> : null}
       </div>
     </div>
