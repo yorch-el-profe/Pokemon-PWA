@@ -1,5 +1,3 @@
-import SadPikachu from "./sad_pikachu.png";
-
 function Offline() {
   return (
     <>
@@ -7,7 +5,7 @@ function Offline() {
         <h1 className="text-center">
           Ups... parece ser que no tienes internet.
         </h1>
-        <img src={SadPikachu} className="img-fluid" alt="sad pikachu" />
+        <img src="/sad_pikachu.png" className="img-fluid" alt="sad pikachu" />
       </div>
     </>
   );
